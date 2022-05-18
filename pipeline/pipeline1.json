@@ -40,7 +40,7 @@
 				"userProperties": [],
 				"typeProperties": {
 					"items": {
-						"value": "@activity('Lookup1').output",
+						"value": "@activity('Lookup1').output.value",
 						"type": "Expression"
 					},
 					"activities": [
@@ -85,7 +85,7 @@
 									"type": "DatasetReference",
 									"parameters": {
 										"tableName": {
-											"value": "@item().value",
+											"value": "@item()",
 											"type": "Expression"
 										}
 									}
@@ -99,7 +99,7 @@
 										"container": "ingestion",
 										"folder": "carloca",
 										"file": {
-											"value": "@concat(item().value, '.parquet')",
+											"value": "@concat(item(), '.parquet')",
 											"type": "Expression"
 										}
 									}
